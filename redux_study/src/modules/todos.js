@@ -4,15 +4,15 @@ const TOGGLE_TODO = 'todos/TOGGLE_TODO';
 
 /** 액션 생성함수 선언 */
 let nextId = 1; // todo 데이터에서 사용할 고유 id
-export const addTOdo = (text) => ({
+export const addTodo = (text) => ({
   type: ADD_TODO,
   todo: {
-    id: nextId++, // 액션에서 뭔가를 업데이트 할 수도 있음
+    id: ++nextId, // 액션에서 뭔가를 업데이트 할 수도 있음
     text,
   },
 });
 
-export const toggleTOdo = (id) => ({
+export const toggleTodo = (id) => ({
   type: TOGGLE_TODO,
   id,
 });
